@@ -1,0 +1,111 @@
+/*
+Description: base16 syntax color theme for highlight.js
+Author: Guang Shi
+Version: 1.0
+*/
+
+:root {
+    --base00: #fafafa;
+    --base01: #f0f0f1;
+    --base02: #e5e5e6;
+    --base03: #a0a1a7;
+    --base04: #696c77;
+    --base05: #383a42;
+    --base06: #202227;
+    --base07: #090a0b;
+    --base08: #9A394F;
+    --base09: #8E615F;
+    --base0A: #5A6940;
+    --base0B: #306754;
+    --base0C: #005A8D;
+    --base0D: #395DB2;
+    --base0E: #5F549B;
+    --base0F: #A03C6D;
+}
+
+pre.hljs {
+    background-color: #f4f4f4;
+    color: var(--base07);
+}
+
+:not(pre) > code {
+    background-color: #f4f4f4;
+    border-width: 1px;
+    border-color: var(--base02);
+    padding: 0.1rem;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: var(--base04);
+    font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+    color: var(--base0E);
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+    color: var(--base08);
+}
+
+.hljs-literal {
+    color: var(--base0C);
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+    color: var(--base0B);
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+    color: var(--base0A);
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+    color: var(--base0F);
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+    color: var(--base0D);
+}
+
+.hljs-params {
+    color: var(--base09)
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-title,
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-link {
+    text-decoration: underline;
+}
