@@ -1,0 +1,60 @@
+/*
+Description: Chinese Palette design tokens
+Author: Guang Shi
+Version: 2.0
+*/
+
+:root,
+[data-theme="chinese-palette"] {
+    --base00: #fafafa;
+    --base01: #f0f0f1;
+    --base02: #e5e5e6;
+    --base03: #a0a1a7;
+    --base04: #696c77;
+    --base05: #383a42;
+    --base06: #202227;
+    --base07: #090a0b;
+    --base08: #9a394f;
+    --base09: #8e615f;
+    --base0A: #5a6940;
+    --base0B: #306754;
+    --base0C: #005a8d;
+    --base0D: #395db2;
+    --base0E: #5f549b;
+    --base0F: #a03c6d;
+
+    --color-bg: var(--base00);
+    --color-surface: #f4f4f4;
+    --color-surface-muted: var(--base01);
+    --color-surface-strong: var(--base02);
+    --color-text: var(--base06);
+    --color-text-strong: var(--base07);
+    --color-text-muted: var(--base04);
+    --color-border: var(--base02);
+    --color-border-strong: var(--base03);
+    --color-link: var(--base0D);
+    --color-link-hover: var(--base0E);
+    --color-link-visited: var(--base0E);
+    --color-accent: var(--base08);
+    --color-success: var(--base0B);
+    --color-warning: var(--base0A);
+    --color-danger: var(--base08);
+    --color-info: var(--base0C);
+    --color-selection: rgba(57, 93, 178, 0.18);
+    --color-focus-ring: rgba(57, 93, 178, 0.35);
+
+    --color-code-bg: var(--color-surface);
+    --color-code-border: var(--color-border);
+    --color-code-text: var(--color-text-strong);
+    --color-inline-code-bg: var(--color-surface-muted);
+
+    --syntax-comment: var(--base04);
+    --syntax-keyword: var(--base0E);
+    --syntax-name: var(--base08);
+    --syntax-literal: var(--base0C);
+    --syntax-string: var(--base0B);
+    --syntax-type: var(--base0A);
+    --syntax-variable: var(--base0F);
+    --syntax-title: var(--base0D);
+    --syntax-params: var(--base09);
+}

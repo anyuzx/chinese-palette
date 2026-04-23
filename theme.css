@@ -1,0 +1,203 @@
+/*
+Description: Chinese Palette generic HTML theme
+Author: Guang Shi
+Version: 2.0
+*/
+
+html {
+    color-scheme: light;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    accent-color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+dt,
+legend {
+    color: var(--color-text-strong);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-link-hover);
+}
+
+a:visited {
+    color: var(--color-link-visited);
+}
+
+small,
+figcaption,
+caption {
+    color: var(--color-text-muted);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 0.25rem 0 0.25rem 1rem;
+    background: var(--color-surface-muted);
+    border-left: 0.25rem solid var(--color-border-strong);
+    color: var(--color-text-muted);
+}
+
+fieldset {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.6rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 0.5rem;
+}
+
+th,
+td {
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--color-border);
+}
+
+th {
+    background: var(--color-surface-muted);
+    color: var(--color-text-strong);
+    font-weight: 600;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--color-surface-muted);
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: Consolas, "Liberation Mono", Menlo, Monaco, monospace;
+}
+
+pre {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    background: var(--color-code-bg);
+    border: 1px solid var(--color-code-border);
+    border-radius: 0.5rem;
+    color: var(--color-code-text);
+}
+
+pre code {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+:not(pre) > code {
+    padding: 0.1rem 0.3rem;
+    background: var(--color-inline-code-bg);
+    border: 1px solid var(--color-code-border);
+    border-radius: 0.3rem;
+    color: var(--color-code-text);
+}
+
+kbd {
+    padding: 0.1rem 0.35rem;
+    background: var(--color-surface-muted);
+    border: 1px solid var(--color-border-strong);
+    border-bottom-width: 2px;
+    border-radius: 0.35rem;
+    color: var(--color-text-strong);
+}
+
+mark {
+    padding: 0 0.15em;
+    background: rgba(90, 105, 64, 0.18);
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    padding: 0.5rem 0.85rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-strong);
+    border-radius: 0.45rem;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background: var(--color-surface-muted);
+}
+
+input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+textarea,
+select {
+    padding: 0.5rem 0.65rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-strong);
+    border-radius: 0.45rem;
+}
+
+textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+::selection {
+    background: var(--color-selection);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+}

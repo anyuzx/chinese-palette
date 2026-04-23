@@ -1,0 +1,101 @@
+/*
+Description: Chinese Palette highlight.js adapter
+Author: Guang Shi
+Version: 2.0
+*/
+
+.hljs {
+    color: var(--color-code-text);
+}
+
+pre code.hljs {
+    display: block;
+    padding: 0;
+    overflow-x: auto;
+    background: transparent;
+}
+
+:not(pre) > code.hljs {
+    background: var(--color-inline-code-bg);
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: var(--syntax-comment);
+    font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+    color: var(--syntax-keyword);
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-tag,
+.hljs-deletion,
+.hljs-subst {
+    color: var(--syntax-name);
+}
+
+.hljs-literal,
+.hljs-operator {
+    color: var(--syntax-literal);
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string,
+.hljs-char.escape_ {
+    color: var(--syntax-string);
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title,
+.hljs-type {
+    color: var(--syntax-type);
+}
+
+.hljs-attr,
+.hljs-property,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+    color: var(--syntax-variable);
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-template-tag,
+.hljs-title {
+    color: var(--syntax-title);
+}
+
+.hljs-params {
+    color: var(--syntax-params);
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-section,
+.hljs-title,
+.hljs-strong {
+    font-weight: 600;
+}
+
+.hljs-link {
+    text-decoration: underline;
+}

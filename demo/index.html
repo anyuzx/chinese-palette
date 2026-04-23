@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" data-theme="chinese-palette">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chinese Palette Demo</title>
+    <link rel="stylesheet" href="../chinese-palette.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem 1.25rem 4rem;
+            line-height: 1.6;
+            font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+        }
+
+        main {
+            max-width: 72rem;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .hero,
+        .stack {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        }
+
+        .panel {
+            padding: 1.25rem;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 0.75rem;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 0.75rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .swatches li {
+            overflow: hidden;
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 0.6rem;
+        }
+
+        .swatch {
+            height: 3.5rem;
+        }
+
+        .swatch-meta {
+            padding: 0.65rem 0.8rem;
+        }
+
+        label {
+            display: grid;
+            gap: 0.35rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1.5rem 1rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="hero">
+            <p>Chinese Palette</p>
+            <h1>A general website theme with a highlight.js adapter</h1>
+            <p>
+                The refactor keeps the original Base16 color relationships, but exposes them through reusable
+                semantic tokens for pages, forms, tables, and code.
+            </p>
+            <div class="actions">
+                <a href="https://github.com/chriskempson/base16">Base16 reference</a>
+                <a href="https://highlightjs.org/">highlight.js</a>
+                <button type="button">Primary action</button>
+            </div>
+        </header>
+
+        <section class="grid">
+            <article class="panel stack">
+                <h2>Semantic Tokens</h2>
+                <p>
+                    Use <code>--color-bg</code>, <code>--color-surface</code>, and <code>--color-text</code> for
+                    document styling, then layer on syntax colors only where needed.
+                </p>
+                <ul class="swatches">
+                    <li>
+                        <div class="swatch" style="background: var(--base08);"></div>
+                        <div class="swatch-meta">
+                            <strong>Accent</strong><br>
+                            <small>var(--base08)</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="swatch" style="background: var(--base0B);"></div>
+                        <div class="swatch-meta">
+                            <strong>Success</strong><br>
+                            <small>var(--base0B)</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="swatch" style="background: var(--base0D);"></div>
+                        <div class="swatch-meta">
+                            <strong>Link</strong><br>
+                            <small>var(--base0D)</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="swatch" style="background: var(--base0E);"></div>
+                        <div class="swatch-meta">
+                            <strong>Keyword</strong><br>
+                            <small>var(--base0E)</small>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="panel stack">
+                <h2>Form Controls</h2>
+                <fieldset class="stack">
+                    <legend>Newsletter</legend>
+                    <label>
+                        Name
+                        <input type="text" placeholder="Your name">
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" placeholder="name@example.com">
+                    </label>
+                    <label>
+                        Notes
+                        <textarea placeholder="Questions, notes, or a short brief"></textarea>
+                    </label>
+                    <label>
+                        Format
+                        <select>
+                            <option>Weekly digest</option>
+                            <option>Monthly notes</option>
+                            <option>Release alerts</option>
+                        </select>
+                    </label>
+                    <div class="actions">
+                        <input type="submit" value="Subscribe">
+                        <button type="reset">Reset</button>
+                    </div>
+                </fieldset>
+            </article>
+        </section>
+
+        <section class="grid">
+            <article class="panel stack">
+                <h2>Prose and Tables</h2>
+                <p>
+                    The theme is aimed at long-form content, so links, <mark>inline emphasis</mark>, blockquotes,
+                    tables, and inline code all share the same token system.
+                </p>
+                <blockquote>
+                    The original project was only a syntax theme. The refactor keeps that behavior, but makes the
+                    palette useful for the rest of the page too.
+                </blockquote>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>--color-surface</code></td>
+                            <td>Cards, buttons, and code blocks</td>
+                        </tr>
+                        <tr>
+                            <td><code>--color-border</code></td>
+                            <td>Subtle separators and table lines</td>
+                        </tr>
+                        <tr>
+                            <td><code>--syntax-string</code></td>
+                            <td>Reusable token for code adapters</td>
+                        </tr>
+                    </tbody>
+                    <caption>Semantic aliases keep the palette reusable outside syntax highlighting.</caption>
+                </table>
+            </article>
+
+            <article class="panel stack">
+                <h2>Code Sample</h2>
+                <pre><code class="hljs language-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">data-theme</span>=<span class="hljs-string">"chinese-palette"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"chinese-palette.css"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>semantic tokens plus syntax colors<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+                <p>
+                    Inline code still reads cleanly, for example <code>--color-code-bg</code> and
+                    <code>--syntax-keyword</code>.
+                </p>
+                <p>Keyboard hints also inherit the palette: <kbd>Cmd</kbd> + <kbd>K</kbd>.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
